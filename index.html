@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TaskFlow - To-Do Manager</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="background-shape shape-one"></div>
+  <div class="background-shape shape-two"></div>
+
+  <main class="app-container">
+
+    <!-- Header -->
+    <header class="app-header">
+
+      <div>
+        <span class="badge">PRODUCTIVITY APP</span>
+
+        <h1>
+          Task<span>Flow</span>
+        </h1>
+
+        <p>
+          Organize your day. Get things done.
+        </p>
+      </div>
+
+      <div class="header-icon">
+        ✓
+      </div>
+
+    </header>
+
+
+    <!-- Statistics -->
+    <section class="stats">
+
+      <div class="stat-card">
+        <div class="stat-icon total-icon">📋</div>
+
+        <div>
+          <span>Total Tasks</span>
+          <strong id="totalCount">0</strong>
+        </div>
+      </div>
+
+
+      <div class="stat-card">
+        <div class="stat-icon active-icon">⚡</div>
+
+        <div>
+          <span>Active</span>
+          <strong id="activeCount">0</strong>
+        </div>
+      </div>
+
+
+      <div class="stat-card">
+        <div class="stat-icon completed-icon">✓</div>
+
+        <div>
+          <span>Completed</span>
+          <strong id="completedCount">0</strong>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- Add Task -->
+    <section class="task-input-section">
+
+      <form id="taskForm">
+
+        <div class="input-wrapper">
+
+          <span class="input-icon">＋</span>
+
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="What needs to be done?"
+            autocomplete="off"
+          >
+
+        </div>
+
+        <button type="submit" class="add-btn">
+          Add Task
+        </button>
+
+      </form>
+
+    </section>
+
+
+    <!-- Search -->
+    <div class="search-wrapper">
+
+      <span>⌕</span>
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search your tasks..."
+        autocomplete="off"
+      >
+
+    </div>
+
+
+    <!-- Filters -->
+    <div class="toolbar">
+
+      <div class="filters" id="filters">
+
+        <button
+          class="filter-btn active"
+          data-filter="all"
+        >
+          All
+        </button>
+
+        <button
+          class="filter-btn"
+          data-filter="active"
+        >
+          Active
+        </button>
+
+        <button
+          class="filter-btn"
+          data-filter="completed"
+        >
+          Completed
+        </button>
+
+      </div>
+
+      <button
+        id="clearCompleted"
+        class="clear-btn"
+      >
+        Clear Completed
+      </button>
+
+    </div>
+
+
+    <!-- Task List -->
+    <section class="tasks-section">
+
+      <div class="section-title">
+
+        <h2>Your Tasks</h2>
+
+        <span id="taskCount">
+          0 tasks left
+        </span>
+
+      </div>
+
+      <ul id="taskList" class="task-list"></ul>
+
+      <div id="emptyState" class="empty-state">
+
+        <div class="empty-icon">
+          ✓
+        </div>
+
+        <h3>No tasks found</h3>
+
+        <p>
+          Add a task and start being productive.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+      <span>
+        TaskFlow
+      </span>
+
+      <span>
+        Built with HTML • CSS • JavaScript
+      </span>
+
+    </footer>
+
+  </main>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
